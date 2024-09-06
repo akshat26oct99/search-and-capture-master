@@ -1,0 +1,154 @@
+.game-completed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-completed-content {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff; /* White with 80% opacity */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  position: relative; /* Ensure the share buttons can be positioned at the bottom */
+}
+
+.game-completed-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.5); /* Title color */
+  font-weight: bold;
+}
+
+.stars {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.game-completed-message {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.game-completed-points {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.go-home-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: 2px solid #2563eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.go-home-button:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* New styles for the share section */
+.share-section {
+  margin-top: 20px;
+}
+
+.share-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.share-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.share-button {
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.share-button.twitter {
+  background-color: #1da1f2; /* Twitter */
+}
+
+.share-button.telegram {
+  background-color: #0088cc; /* Telegram */
+}
+
+.share-button.whatsapp {
+  background-color: #25D366; /* WhatsApp */
+}
+
+.share-button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .game-completed-title {
+    font-size: 1.25rem;
+  }
+
+  .go-home-button {
+    font-size: 0.9rem;
+  }
+
+  .share-title {
+    font-size: 1rem;
+  }
+
+  .share-button {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-completed-title {
+    font-size: 1rem;
+  }
+
+  .go-home-button {
+    font-size: 0.8rem;
+  }
+
+  .share-title {
+    font-size: 0.9rem;
+  }
+
+  .share-button {
+    font-size: 0.7rem;
+  }
+}
+button.go-home-button {
+    margin: 12px;
+}
+.share-buttons {
+    display: flex;
+    gap: 10px;
+    width: 336px;
+    height: 49px;
+}

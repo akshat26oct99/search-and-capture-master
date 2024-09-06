@@ -1,0 +1,303 @@
+/* Container for levels page */
+.levels-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #cbe1eb57, #fff);
+  text-align: center;
+  border: solid;
+  border-color: rgba(255, 255, 255, 0.47);
+  border-radius: 51px;
+  position: relative; /* Positioning for the info icon */
+}
+
+/* Title styles */
+h1 {
+  font-family: monospace;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  background: #ffffff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid layout for levels */
+.levels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Level item container */
+.level-item {
+  position: relative; /* For positioning the lock icon */
+}
+
+/* Styles for level buttons */
+.level-button {
+  background: linear-gradient(145deg, #2196f3, #90caf9);
+  border: none;
+  border-radius: 50%; /* Make the button circular */
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 128px;
+  height: 128px; /* Ensure button is circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect for level buttons */
+.level-button:hover {
+  background: linear-gradient(145deg, #1e88e5, #81d4fa);
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.level-button:focus {
+  outline: none;
+}
+
+/* Styles for locked levels */
+.level-button.locked {
+  background: #ddd; /* Grey background for locked levels */
+  cursor: not-allowed; /* Change cursor for disabled state */
+}
+
+/* Lock icon styles */
+.level-lock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  color: #ffffff; /* Color of the lock icon */
+  z-index: 10;
+  opacity: 0.8; /* Adjust opacity for visibility */
+}
+
+/* Specific style for open lock on the first level */
+.level-item.first .level-lock {
+  content: "\1F513"; /* Unicode for open lock symbol */
+}
+
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.popup-content h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+  font-family: monospace;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.popup-close {
+  background: #007bff;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.popup-close:hover {
+  background: #0056b3;
+}
+
+/* Info icon styles */
+.info-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.info-icon:hover {
+  color: #0056b3;
+}
+
+/* Info modal styles */
+.info-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.info-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  font-family: monospace;
+}
+
+.info-content h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.info-content p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.info-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.info-close {
+  background: #007bff;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.info-close:hover {
+  background: #0056b3;
+}
+
+/* Styling for the info list */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+.info-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-icon {
+  font-size: 1.5rem; /* Adjust size for better visibility */
+  margin-right: 0.75rem;
+  color: #007bff; /* Change to your preferred color */
+}
+
+.info-list li:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+.info-list li:active {
+  background-color: #dee2e6;
+}
+
+/* App container button styles */
+.app-container button {
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 52px;
+    width: -webkit-fill-available;
+}
+
+/* Loading popup styles */
+.loading-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it appears on top */
+}
+
+.loading-popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-popup-content p {
+  color: #333;
+}
